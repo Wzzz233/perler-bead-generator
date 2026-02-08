@@ -99,7 +99,7 @@ if src:
     cols = st.columns(6)
     for i, (col, n) in enumerate(sorted(cnt.items(), key=lambda x:x[1], reverse=True)):
         # 过滤掉纯白色背景（如果是背景色的话）
-        if col.lower() == bg_color.lower() and mode == "自己画图":
+        if mode == "自己画图" and col.lower() == bg_color.lower():
             continue
             
         with cols[i%6]:
